@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -53,6 +54,12 @@ const Navbar = () => {
               [{item}]
             </button>
           ))}
+          <Link
+            to="/steam"
+            className="px-4 py-2 border border-[#00ff41] text-[#00ff41] font-mono hover:bg-[#00ff41]/10 transition-all"
+          >
+            [ VER EN STEAM ]
+          </Link>
         </div>
       </div>
     </nav>
