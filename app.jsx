@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
@@ -30,7 +29,8 @@ const Landing = () => (
     </main>
     <footer className="py-10 text-center border-t border-[#00ff41]/10">
       <p className="font-mono text-xs text-gray-600">
-        <span className="text-[#00ff41]">$</span> echo "© 2026 Priruta — Viruta en el Piso 13"
+        <span className="text-[#00ff41]">$</span> echo "© 2026 Priruta — Viruta
+        en el Piso 13"
       </p>
       <p className="font-pixel text-[8px] text-gray-700 mt-3 tracking-widest">
         SYSTEM_STATUS: ONLINE — ALL_FLOORS_OPERATIONAL
