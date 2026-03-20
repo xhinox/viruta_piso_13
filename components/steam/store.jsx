@@ -23,7 +23,9 @@ const Store = () => {
     ? games.filter(
         (g) =>
           g.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          g.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()))
+          g.tags.some((t) =>
+            t.toLowerCase().includes(searchQuery.toLowerCase()),
+          ),
       )
     : games;
 
@@ -32,7 +34,7 @@ const Store = () => {
       gsap.fromTo(
         headerRef.current,
         { y: -40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
       );
 
       gsap.fromTo(
@@ -45,7 +47,7 @@ const Store = () => {
           stagger: 0.08,
           ease: "power2.out",
           delay: 0.4,
-        }
+        },
       );
     });
 
@@ -64,7 +66,7 @@ const Store = () => {
             to="/"
             className="font-pixel text-xs text-[#00ff41] neon-green hover:text-white transition-colors shrink-0"
           >
-            {"<"} PISO_13
+            {"<"} VIRUTA EN EL PISO 13
           </Link>
 
           <div className="font-pixel text-sm text-[#05d9e8] tracking-wider hidden md:block">
@@ -99,7 +101,10 @@ const Store = () => {
       <div className="max-w-7xl mx-auto px-6 py-8">
         {/* Category Tabs */}
         {!searchQuery && (
-          <div ref={categoriesRef} className="flex gap-3 mb-10 overflow-x-auto pb-2">
+          <div
+            ref={categoriesRef}
+            className="flex gap-3 mb-10 overflow-x-auto pb-2"
+          >
             {["Todos", "Acción", "Horror", "Indie", "Pixel Art", "Ofertas"].map(
               (cat) => (
                 <button
@@ -108,7 +113,7 @@ const Store = () => {
                 >
                   {cat}
                 </button>
-              )
+              ),
             )}
           </div>
         )}
